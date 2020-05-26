@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.Bachat">
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.Bachat.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter></activity>
+        <activity android:name="com.example.Bachat.SecondScreen"></activity>
+        <activity android:name="com.example.Bachat.ThirdScreen"></activity>
+        <activity android:name="com.example.Bachat.FourthScreen"></activity>
+        <activity android:name="com.example.Bachat.FifthScreen"></activity>
+        <activity android:name="com.example.Bachat.SixthScreen"></activity>
+        <activity android:name="com.example.Bachat.ShowAllScreen"></activity>
+        <activity android:name="com.example.Bachat.EditScreen"></activity>
+        <activity android:name="com.example.Bachat.EarningSecondScreen"></activity>
+        <activity android:name="com.example.Bachat.EarningThirdScreen"></activity>
+        <activity android:name="com.example.Bachat.EarningFourthScreen"></activity>
+        <activity android:name="com.example.Bachat.EarningFifthScreen"></activity>
+        <activity android:name="com.example.Bachat.EarningShowAllScreen"></activity>
+        <activity android:name="com.example.Bachat.EarningEditScreen"></activity>
+        <activity android:name="com.example.Bachat.ImportScreen"></activity>
+        <activity android:name="com.example.Bachat.EarningImportScreen"></activity>
+        <activity android:name="com.example.Bachat.ImportToScreen"></activity>
+        <activity android:name="com.example.Bachat.ThresholdScreen"></activity>
+        <activity android:name="com.example.Bachat.ThresholdCategoryScreen"></activity>
+        <activity android:name="com.example.Bachat.ThresholdViewScreen"></activity>
+    </application>
+</manifest>

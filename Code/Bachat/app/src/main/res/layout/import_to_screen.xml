@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewEarning"
+        android:layout_width="166dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewExpense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewImportEarning"
+        app:layout_constraintTop_toBottomOf="@+id/textViewImport"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageView
+        android:id="@+id/imageViewExpense"
+        android:layout_width="181dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewImportExpense"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewEarning"
+        app:srcCompat="@drawable/minus" />
+
+    <TextView
+        android:id="@+id/textViewImport"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="IMPORT TO?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewImportEarning"
+        android:layout_width="95dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="142dp"
+        android:text="Earning"
+        app:layout_constraintBottom_toTopOf="@+id/textViewImportExpense"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewEarning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewImport" />
+
+    <TextView
+        android:id="@+id/textViewImportExpense"
+        android:layout_width="95dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="50dp"
+        android:text="Expenses"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewExpense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewImportEarning" />
+</androidx.constraintlayout.widget.ConstraintLayout>

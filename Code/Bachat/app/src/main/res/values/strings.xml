@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">First</string>
+    <string-array name="FilterOptions">
+        <item>No Filter</item>
+        <item>Category</item>
+        <item>Date</item>
+        <item>Payment Method</item>
+    </string-array>
+    <string-array name="Modeofpayment">
+        <item>Cash</item>
+        <item>Debit Card</item>
+        <item>Credit Card</item>
+        <item>E-Wallet</item>
+        <item>Bank Transfer</item>
+    </string-array>
+
+    <!--Toggle Activity variables-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

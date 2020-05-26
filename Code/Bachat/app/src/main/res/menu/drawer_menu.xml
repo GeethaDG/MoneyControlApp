@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menuHome"
+            android:title="Home" />
+
+        <item android:id="@+id/menuIncome"
+            android:title="Incomes" />
+
+        <item android:id="@+id/menuExpense"
+            android:title="Expenses" />
+
+        <item android:id="@+id/menuThreshold"
+            android:title="Budget" />
+
+        <item android:id="@+id/menuImport"
+            android:title="Import" />
+
+        <item android:id="@+id/menuExport"
+            android:title="Export" />
+
+    </group>
+</menu>
