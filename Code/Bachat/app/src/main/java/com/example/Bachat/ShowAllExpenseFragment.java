@@ -91,7 +91,8 @@ public class ShowAllExpenseFragment extends Fragment {
         optionsSpinner.setAdapter(optionsAdapter);
         optionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view1, int position, long id) {
+
                 String options = parent.getItemAtPosition(position).toString();
                 Toast.makeText(parent.getContext(), options + " chosen", Toast.LENGTH_SHORT).show();
                 if (options == "Category Only" || options == "Date and Category"){
@@ -108,25 +109,27 @@ public class ShowAllExpenseFragment extends Fragment {
                     }
 
                     Spinner categorySpinner = (Spinner) view.findViewById(R.id.spnCategory);
-                    //categorySpinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
-                    ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String> (getActivity(),android.R.layout.simple_list_item_1,
-                            CategoryExpenseList);
-                    categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    categorySpinner.setAdapter(categoryAdapter);
+                    if(categorySpinner!=null) {
+                        //categorySpinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) getActivity());
+                        ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
+                                CategoryExpenseList);
+                        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        categorySpinner.setAdapter(categoryAdapter);
 
 
-                    categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            String category = parent.getItemAtPosition(position).toString();
-                            //Toast.makeText(parent.getContext(), category + " chosen", Toast.LENGTH_SHORT).show();
-                        }
+                        categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                String category = parent.getItemAtPosition(position).toString();
+                                //Toast.makeText(parent.getContext(), category + " chosen", Toast.LENGTH_SHORT).show();
+                            }
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> parent) {
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parent) {
 
-                        }
-                    });
+                            }
+                        });
+                    }
                 }
                 if (options == "Date Only" || options == "Date and Category"){
                     ArrayAdapter<String> yearAdapter;
@@ -143,7 +146,7 @@ public class ShowAllExpenseFragment extends Fragment {
 
                     yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
-                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        public void onItemSelected(AdapterView<?> parent, View view1, int position, long id) {
                             Toast.makeText(parent.getContext(), "Choose month and date to refine your search", Toast.LENGTH_SHORT).show();
                             int yearItem = Integer.parseInt(parent.getItemAtPosition(position).toString());
                             if (monthSelected.getSelectedItem().toString() == "All") {
@@ -174,7 +177,7 @@ public class ShowAllExpenseFragment extends Fragment {
 
                     monthSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
-                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        public void onItemSelected(AdapterView<?> parent, View view1, int position, long id) {
                             year = Integer.parseInt(yearSelected.getSelectedItem().toString());
                             if (monthSelected.getSelectedItem().toString() == "All") {
                                 dateSetting(year, 0,view);
